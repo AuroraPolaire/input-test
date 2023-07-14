@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
 export const useValidate = ({ password }) => {
-  console.log(password);
   const [empty, setEmpty] = useState(true);
   const [enoughDigits, setEnoughDigits] = useState(false);
   const [hasLetters, setHasLetters] = useState(false);
