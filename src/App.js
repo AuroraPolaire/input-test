@@ -10,8 +10,6 @@ function App() {
     password,
   });
 
-  console.log(easy, medium, strong, empty, enoughDigits);
-
   return (
     <StyledForm>
       <div className="input-box">
@@ -20,32 +18,34 @@ function App() {
           onChange={(e) => setPassword(e.currentTarget.value)}
         />
 
-        <div
-          className={`${empty ? "gray" : ""} ${
-            !enoughDigits && !empty ? "red" : ""
-          } ${enoughDigits && easy ? "red" : ""} ${
-            enoughDigits && medium ? "yellow" : ""
-          } ${enoughDigits && strong ? "green" : ""} box`}
-        >
-          Easy
-        </div>
-        <div
-          className={`${empty ? "gray" : ""} ${
-            !enoughDigits && !empty ? "red" : ""
-          } ${enoughDigits && easy ? "gray" : ""} ${
-            enoughDigits && medium ? "yellow" : ""
-          } ${enoughDigits && strong ? "green" : ""} box`}
-        >
-          Medium
-        </div>
-        <div
-          className={`${empty ? "gray" : ""} ${
-            !enoughDigits && !empty ? "red" : ""
-          } ${enoughDigits && easy ? "gray" : ""} ${
-            enoughDigits && medium ? "gray" : ""
-          } ${enoughDigits && strong ? "green" : ""} box`}
-        >
-          Strong
+        <div className="validation-box">
+          <div
+            className={`${empty ? "gray" : ""} ${
+              !enoughDigits && !empty ? "red" : ""
+            } ${enoughDigits && easy ? "red" : ""} ${
+              enoughDigits && medium ? "yellow" : ""
+            } ${enoughDigits && strong ? "green" : ""} box`}
+          >
+            Easy
+          </div>
+          <div
+            className={`${empty ? "gray" : ""} ${
+              !enoughDigits && !empty ? "red" : ""
+            } ${enoughDigits && easy ? "gray" : ""} ${
+              enoughDigits && medium ? "yellow" : ""
+            } ${enoughDigits && strong ? "green" : ""} box`}
+          >
+            Medium
+          </div>
+          <div
+            className={`${empty ? "gray" : ""} ${
+              !enoughDigits && !empty ? "red" : ""
+            } ${enoughDigits && easy ? "gray" : ""} ${
+              enoughDigits && medium ? "gray" : ""
+            } ${enoughDigits && strong ? "green" : ""} box`}
+          >
+            Strong
+          </div>
         </div>
 
         {easy && enoughDigits ? (
