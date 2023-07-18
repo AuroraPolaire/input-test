@@ -41,8 +41,11 @@ export const useValidate = ({ password }) => {
 
   useEffect(() => {
     updateValidation();
+  }, [updateValidation]);
+
+  useEffect(() => {
     getPasswordStrength();
-  }, [getPasswordStrength, updateValidation]);
+  }, [getPasswordStrength]);
 
   useEffect(() => {
     if (empty) {

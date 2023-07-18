@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const StyledForm = styled.form`
   display: flex;
   justify-content: center;
@@ -43,14 +44,14 @@ export const StyledForm = styled.form`
     text-align: center;
   }
   .yellow {
-    border-color: #ffff00;
-    color: #ffff00;
+    border-color: #ffee00;
+    color: #ffee00;
 
     text-align: center;
   }
   .green {
-    border-color: #00ff00;
-    color: #00ff00;
+    border-color: #00cb00;
+    color: #00cb00;
     text-align: center;
   }
 `;
