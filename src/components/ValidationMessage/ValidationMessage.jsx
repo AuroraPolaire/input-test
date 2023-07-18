@@ -12,7 +12,7 @@ const ValidationMessage = ({ password }) => {
       {medium && enoughDigits ? message.medium : null}
       {strong && enoughDigits ? message.strong : null}
       {empty ? message.empty : null}
-      {!enoughDigits && !empty ? message.enoughDigits : null}
+      {!enoughDigits && !empty ? message.notEnoughDigits : null}
     </>
   );
 };

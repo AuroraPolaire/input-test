@@ -32,11 +32,11 @@ export const StyledForm = styled.form`
     padding: 3px;
     border-radius: 2px;
     border: 1px solid;
+    text-align: center;
   }
   .gray {
     border-color: #808080;
     color: #808080;
-    text-align: center;
   }
   .red {
     border-color: #ff0000;
@@ -46,12 +46,10 @@ export const StyledForm = styled.form`
   .yellow {
     border-color: #ffee00;
     color: #ffee00;
-
     text-align: center;
   }
   .green {
     border-color: #00cb00;
     color: #00cb00;
-    text-align: center;
   }
 `;

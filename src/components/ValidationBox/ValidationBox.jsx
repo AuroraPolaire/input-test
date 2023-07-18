@@ -9,31 +9,14 @@ const ValidationBox = ({ password }) => {
   const getClassNames = (strength) => {
     const classNames = ["box"];
 
-    switch (strength) {
-      case "easy":
-        if (empty) classNames.push("gray");
-        if (!enoughDigits && !empty) classNames.push("red");
-        if (enoughDigits && easy) classNames.push("red");
-        if (enoughDigits && medium) classNames.push("yellow");
-        if (enoughDigits && strong) classNames.push("green");
-        return classNames.join(" ");
-      case "medium":
-        if (empty) classNames.push("gray");
-        if (!enoughDigits && !empty) classNames.push("red");
-        if (enoughDigits && easy) classNames.push("gray");
-        if (enoughDigits && medium) classNames.push("yellow");
-        if (enoughDigits && strong) classNames.push("green");
-        return classNames.join(" ");
-      case "strong":
-        if (empty) classNames.push("gray");
-        if (!enoughDigits && !empty) classNames.push("red");
-        if (enoughDigits && easy) classNames.push("gray");
-        if (enoughDigits && medium) classNames.push("gray");
-        if (enoughDigits && strong) classNames.push("green");
-        return classNames.join(" ");
-      default:
-        return;
-    }
+    if (empty) classNames.push("gray");
+    if (!enoughDigits && !empty) classNames.push("red");
+    if (enoughDigits && easy && strength === "easy") classNames.push("red");
+    if (enoughDigits && medium && strength !== "strong")
+      classNames.push("yellow");
+    if (enoughDigits && strong) classNames.push("green");
+
+    return classNames.join(" ");
   };
 
   return (
